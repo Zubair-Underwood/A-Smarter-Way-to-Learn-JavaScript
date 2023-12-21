@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let numbers = [2, 4, 6, 8, 10, 7, 12];
+
+        let flag = false;
+
+        for (let i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] > 5) {
+
+                flag = true;
+                break;
+            }
+
+            document.write(numbers[i]);
+        }
+
+        document.write(" Loop stopped due to flag: ", flag);
+
+    </script>
+
+</body>
+
+</html>

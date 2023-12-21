@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let elements = [false, 0, "", null, "hello", true, 42];
+
+        for (let i = 0; i < elements.length; i++) {
+
+            if (typeof elements[i] === 'boolean' && elements[i]) {
+
+                break;
+            }
+
+            document.write(elements[i] + " ");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

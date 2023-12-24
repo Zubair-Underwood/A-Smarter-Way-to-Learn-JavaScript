@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var firstNames = ["BlueRay", "Upchuck", "Lojack", "Gizmo", "Do-Rag"];
+        var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+        var fullNames = [];
+
+        for (var i = 0; i < firstNames.length; i++) {
+
+            for (var j = 0; j < lastNames.length; j++) {
+
+                fullNames.push(firstNames[i] + " " + lastNames[j] + "<br>");
+            }
+        }
+
+        document.write(fullNames);
+
+    </script>
+
+</body>
+
+</html>

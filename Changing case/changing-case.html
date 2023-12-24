@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let cityToCheck = prompt("Enter your city");
+
+        cityToCheck = cityToCheck.toLocaleLowerCase();
+        let cleanestCities = ["cheyenne", "santa Fe", "tucson", "great falls", "honolulu"];
+
+        for (let i = 0; i <= 4; i++) {
+            if (cityToCheck === cleanestCities[i]) {
+                alert("It's one of the cleanest cities");
+            }
+        }
+
+        console.log(cityToCheck);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function printDiamond(n) {
+            if (n % 2 === 0) {
+
+                console.log('Please provide an odd number for a diamond.');
+                return;
+            }
+
+            const midpoint = Math.floor(n / 2);
+
+            for (let i = 0; i < n; i++) {
+
+                let row = '';
+                const spaces = Math.abs(midpoint - i);
+
+                for (let j = 0; j < spaces; j++) {
+                    row += ' ';
+                }
+
+                for (let k = 0; k < n - 2 * spaces; k++) {
+                    row += ' *';
+                }
+
+                console.log(row);
+            }
+        }
+
+        printDiamond(5);
+
+    </script>
+
+</body>
+
+</html>

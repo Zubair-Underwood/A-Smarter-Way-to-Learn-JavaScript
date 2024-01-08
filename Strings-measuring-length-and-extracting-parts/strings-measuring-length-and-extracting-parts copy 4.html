@@ -10,13 +10,17 @@
 <body>
 
     <script>
-        function calculateStringLength(str) {
-            return str.length;
+
+        function extractFirstNCharacters(str, n) {
+
+            return str.slice(0, n);
         }
 
-        // Example Usage:
-        console.log(calculateStringLength("Hello, World!"));
+        console.log(extractFirstNCharacters("Hello, World!", 5));
+
     </script>
 </body>
+
+</html>
 
 </html>

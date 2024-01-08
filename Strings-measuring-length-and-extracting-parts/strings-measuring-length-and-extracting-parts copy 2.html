@@ -10,13 +10,18 @@
 <body>
 
     <script>
-        function calculateStringLength(str) {
-            return str.length;
+
+        function calculateStringLengths(strings) {
+
+            return strings.map(str => str.length);
         }
 
-        // Example Usage:
-        console.log(calculateStringLength("Hello, World!"));
+        let stringArray = ["apple", "banana", "cherry"];
+        console.log(calculateStringLengths(stringArray));
+
     </script>
 </body>
+
+</html>
 
 </html>

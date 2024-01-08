@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function getCharacterAtIndex(str, index) {
+
+            if (index >= 0 && index < str.length) {
+                return str.charAt(index);
+            } else {
+
+                return null;
+            }
+        }
+
+        console.log(getCharacterAtIndex("Hello, World!", 7));
+        console.log(getCharacterAtIndex("Hello, World!", 20));
+
+    </script>
+
+</body>
+
+</html>

@@ -11,14 +11,14 @@
 
     <script>
 
-        function stringToDecimal(str) {
+        function stringToIntWithCommas(str) {
 
-            return parseFloat(str);
+            return parseInt(str.replace(/,/g, ""), 10);
         }
 
-        let strDecimal = "3.14";
-        let decimalValue = stringToDecimal(strDecimal);
-        console.log(decimalValue);
+        let strWithCommas = "1000";
+        let intValueWithCommas = stringToIntWithCommas(strWithCommas);
+        console.log(intValueWithCommas);
 
     </script>
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function isValidNumber(str) {
+            return !isNaN(parseFloat(str)) && isFinite(str);
+        }
+
+        let validNumberString = "123.45";
+        let invalidNumberString = "abc";
+
+        console.log(isValidNumber(validNumberString));
+        console.log(isValidNumber(invalidNumberString));
+    </script>
+
+</body>
+
+</html>

@@ -11,14 +11,15 @@
 
     <script>
 
-        function controlDecimalPlaces(number, decimalPlaces) {
+        function convertAndControlDecimalPlaces(str, decimalPlaces) {
+
+            let number = parseFloat(str);
             return parseFloat(number.toFixed(decimalPlaces));
         }
 
-        let originalNumber = 3.14159;
-        let controlledNumber = controlDecimalPlaces(originalNumber, 2);
-
-        console.log(controlledNumber);
+        let strDecimal = "7.987654";
+        let controlledDecimal = convertAndControlDecimalPlaces(strDecimal, 3);
+        console.log(controlledDecimal);
 
     </script>
 

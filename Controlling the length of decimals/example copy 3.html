@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function ensureMaximumDecimalPlaces(number, maxDecimalPlaces) {
+            let formattedNumber = parseFloat(number.toFixed(maxDecimalPlaces));
+            return formattedNumber;
+        }
+
+        // Example usage:
+        let originalAmount = 123.456789;
+        let maxValueWithDecimals = ensureMaximumDecimalPlaces(originalAmount, 4);
+        console.log(maxValueWithDecimals);  // Output: 123.4568
+
+
+    </script>
+
+</body>
+
+</html>

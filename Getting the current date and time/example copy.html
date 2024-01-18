@@ -11,15 +11,15 @@
 
     <script>
 
-        function getCurrentDateTime() {
+        function getCurrentDate() {
 
             const currentDate = new Date();
-            return currentDate;
+            const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+            return currentDate.toLocaleDateString(undefined, options);
         }
 
-        let currentDateTime = getCurrentDateTime();
-
-        console.log(currentDateTime);
+        let currentDate = getCurrentDate();
+        console.log(currentDate);
 
     </script>
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function getCurrentDateAndTimeFormatted() {
+
+            const currentDate = new Date();
+            const options = {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            };
+
+            return currentDate.toLocaleDateString(undefined, options);
+        }
+
+        let currentFormattedDateTime = getCurrentDateAndTimeFormatted();
+        console.log(currentFormattedDateTime);
+
+    </script>
+
+</body>
+
+</html>

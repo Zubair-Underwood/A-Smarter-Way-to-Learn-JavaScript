@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Write a function that calculates the area of a rectangle. If one of the parameters is not provided, assume it's a square.
+
+        function calculateRectangleArea(length, width = length) {
+            return length * width;
+        }
+
+        // Test the function
+        let result1 = calculateRectangleArea(4, 6);
+        console.log(result1);  // Output should be 24
+
+        let result2 = calculateRectangleArea(5);
+        console.log(result2);  // Output should be 25 (since width is assumed to be the same as length)
+
+
+    </script>
+
+</body>
+
+</html>

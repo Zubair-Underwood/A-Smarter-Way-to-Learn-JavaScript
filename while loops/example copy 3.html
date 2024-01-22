@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function sumOfEvens(limit) {
+
+            let sum = 0;
+            let i = 2;
+
+            while (i <= limit) {
+
+                sum += i;
+                i += 2;
+            }
+
+            return sum;
+        }
+
+        console.log(sumOfEvens(10));
+        console.log(sumOfEvens(7));
+
+    </script>
+
+</body>
+
+</html>

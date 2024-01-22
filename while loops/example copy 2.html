@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function reverseString(input) {
+            let reversed = '';
+            let i = input.length - 1;
+
+            while (i >= 0) {
+                reversed += input[i];
+                i--;
+            }
+
+            return reversed;
+        }
+
+        // Example usage:
+        console.log(reverseString('Hello')); // Output: 'olleH'
+        console.log(reverseString('JavaScript')); // Output: 'tpircSavaJ'
+
+
+    </script>
+
+</body>
+
+</html>

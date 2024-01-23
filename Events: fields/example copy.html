@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="passwordInput">Enter password:</label>
+        <input type="password" id="passwordInput">
+    </form>
+
+    <div id="validationMessage">Password must be at least 8 characters long.</div>
+
+    <script>
+
+        const passwordInput = document.getElementById("passwordInput");
+        const validationMessage = document.getElementById("validationMessage");
+
+        passwordInput.addEventListener("input", function () {
+
+            const password = passwordInput.value;
+            if (password.length >= 8) {
+
+                validationMessage.textContent = "Password is valid.";
+            } else {
+
+                validationMessage.textContent = "Password must be at least 8 characters long.";
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

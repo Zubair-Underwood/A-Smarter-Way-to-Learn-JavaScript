@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea name="" id="textareaInput">This is a text area.</textarea>
+    <button onclick="readTextareaValue()">Read Textarea Value</button>
+
+    <script>
+        function readTextareaValue() {
+
+            let textareaValue = document.getElementById("textareaInput").value;
+            alert("textarea Value: " + textareaValue);
+        }
+
+    </script>
+
+</body>
+
+</html>

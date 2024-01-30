@@ -9,16 +9,18 @@
 
 <body>
 
-    <p id="paragraph"> This is a sample paragraph</p>
-    <button onClick="readParagraphText()">Read Paragraph Text</button>
+    <p id="paragraph">This is a sample paragraph.</p>
+    <button onClick="setParagraphText()">Set Paragraph Text</button>
 
     <script>
 
-        function readParagraphText() {
-            let paragraphText = document.getElementById("paragraph").innerText;
-            alert("Paragraph Text: " + paragraphText);
+        function setParagraphText() {
+            var newParagraphText = "New text set using JavaScript.";
+            document.getElementById("paragraph").innerText = newParagraphText;
         }
+
     </script>
+
 
 </body>
 

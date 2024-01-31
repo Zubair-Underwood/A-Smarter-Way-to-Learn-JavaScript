@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="image1"
+        src="https://images.unsplash.com/photo-1706476307562-b117a0d7cb55?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Image 1">
+    <img id="image2"
+        src="https://images.unsplash.com/photo-1706541152758-a4b221834b73?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Image 2">
+    <button onClick="swapImages()">Swap Images</button>
+
+    <script>
+
+        function swapImages() {
+
+            let image1 = document.getElementById("image1");
+            let image2 = document.getElementById("image2");
+
+            let tempSrc = image1.src;
+
+            image1.src = image2.src;
+
+            image2.src = tempSrc;
+        }
+
+    </script>
+
+</body>
+
+
+
+</html>

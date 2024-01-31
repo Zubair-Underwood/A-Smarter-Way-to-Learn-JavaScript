@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="myText">This is a sample text.</p>
+    <button onClick="increaseFontSize()">Increase Font Size</button>
+    <button onClick="changeTextColor()">Change Text Color</button>
+
+    <script>
+
+        function increaseFontSize() {
+
+            let textElement = document.getElementById("myText");
+            let currentSize = window.getComputedStyle(textElement, null).getPropertyValue("font-size");
+            let newSize = (parseFloat(currentSize) + 2) + "px";
+            textElement.style.fontSize = newSize;
+        }
+
+        function changeTextColor() {
+
+            let textElement = document.getElementById("myText");
+            let randomColor = getRandomColor();
+            textElement.style.color = randomColor;
+        }
+
+        function getRandomColor() {
+
+            let letters = "0123456789ABCDEF";
+            let color = "#";
+            for (var i = 0; i < 6; i++) {
+
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+
+    </script>
+
+</body>
+
+</html>

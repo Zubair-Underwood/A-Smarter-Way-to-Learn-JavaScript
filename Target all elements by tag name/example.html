@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 1</p>
+    <button onClick="changeTextContent()">Change Text Content</button>
+
+
+    <script>
+
+        function changeTextContent() {
+
+            var paragraphs = document.getElementsByTagName("p");
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].textContent = "New text for paragraph" + (i + 1);
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

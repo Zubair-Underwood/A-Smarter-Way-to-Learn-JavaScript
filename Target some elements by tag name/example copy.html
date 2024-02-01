@@ -7,9 +7,33 @@
     <title>Document</title>
 </head>
 
+<style>
+    .special-heading {
+        color: green;
+        font-style: italic;
+    }
+</style>
+
 <body>
 
-   
+    <h1 class="special-heading">Special Heading 1</h1>
+    <h2>Normal Heading 2</h2>
+    <h3 class="special-heading">Special Heading 3</h3>
+    <!-- Add more headings as needed -->
+    <button onclick="styleSpecificHeadings()">Style Specific Headings</button>
+
+
+    <script>
+
+        function styleSpecificHeadings() {
+            var specialHeadings = document.querySelectorAll('h1.special-heading, h3.special-heading');
+            for (var i = 0; i < specialHeadings.length; i++) {
+                specialHeadings[i].style.fontWeight = 'bold';
+            }
+        }
+
+
+    </script>
 
 </body>
 

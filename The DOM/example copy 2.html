@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+
+            background: coral;
+            padding: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p id="myParagraph">This is a paragraph. Click the button to toggle visibility.</p>
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+
+    <script>
+
+        function toggleVisibility() {
+            var myParagraph = document.getElementById('myParagraph');
+            if (myParagraph.style.display === 'none' || myParagraph.style.display === '') {
+                myParagraph.style.display = 'block';
+            } else {
+                myParagraph.style.display = 'none';
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

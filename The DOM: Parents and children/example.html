@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlighted {
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="parent">
+        <p>Child 1</p>
+        <p>Child 2</p>
+        <p>Child 3</p>
+    </div>
+    <button onclick="highlightParentAndChildren()">Highlight</button>
+
+    <script>
+
+        function highlightParentAndChildren() {
+            var parent = document.getElementById('parent');
+
+            // Highlight the parent
+            parent.classList.toggle('highlighted');
+
+            // Highlight all children
+            var children = parent.children;
+            for (var i = 0; i < children.length; i++) {
+                children[i].classList.toggle('highlighted');
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

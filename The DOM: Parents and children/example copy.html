@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlighted {
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="parent">
+
+        <img src="https://images.unsplash.com/photo-1705899322206-5a85daf96e3c?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Image 1">
+        <img src="https://images.unsplash.com/photo-1705899334041-243c497f67ef?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Image 2">
+
+    </div>
+
+    <button onClick="countChildren()">Count Children</button>
+
+    <script>
+
+        function countChildren() {
+
+            let parent = document.getElementById("parent");
+            let childCount = parent.children.length;
+
+            alert("Number off Children: " + childCount);
+        }
+
+    </script>
+
+</body>
+
+</html>

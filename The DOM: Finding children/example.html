@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="parent">
+        <img src="https://images.unsplash.com/photo-1682685797208-c741d58c2eff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Image1">
+        <img src="https://images.unsplash.com/photo-1706545513040-174425281712?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+            " alt="Image2">
+    </div>
+    <button onClick="highLightParentAndChildren()">Highlight</button>
+
+    <script>
+
+        function highLightParentAndChildren() {
+
+            let parent = document.getElementById("parent");
+
+            parent.classList.toggle("highlighted");
+
+            let children = parent.children;
+            for (var i = 0; i < children.length; i++) {
+
+                children[i].classList.toggle("highlighted");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

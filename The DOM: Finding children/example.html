@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img {
+
+            max-width: 100px;
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,21 +21,25 @@
             alt="Image1">
         <img src="https://images.unsplash.com/photo-1706545513040-174425281712?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
             " alt="Image2">
+        <img src="https://images.unsplash.com/photo-1682686581498-5e85c7228119?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="">
     </div>
-    <button onClick="highLightParentAndChildren()">Highlight</button>
+
+    <button onClick="hideSpecificChildren()">Highlight</button>
 
     <script>
 
-        function highLightParentAndChildren() {
+        function hideSpecificChildren() {
 
             let parent = document.getElementById("parent");
-
-            parent.classList.toggle("highlighted");
-
             let children = parent.children;
+
             for (var i = 0; i < children.length; i++) {
 
-                children[i].classList.toggle("highlighted");
+                if (children[i].nodeName.toLowerCase() === "img" && children[i].alt.includes("2")) {
+
+                    children[i].style.display = "none";
+                }
             }
         }
 

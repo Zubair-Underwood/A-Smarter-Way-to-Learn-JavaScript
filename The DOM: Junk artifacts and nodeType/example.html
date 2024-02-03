@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="parent">
+        <!-- This is a comment -->
+        <p>This is a paragraph.</p>
+        Some text node here
+        <p>Another paragraph.</p>
+    </div>
+    <button onclick="removeJunkArtifacts()">Remove Junk Artifacts</button>
+
+    <script>
+
+        function removeJunkArtifacts() {
+            var parent = document.getElementById('parent');
+            var children = parent.childNodes;
+
+            // Remove junk artifacts (e.g., comments and text nodes)
+            for (var i = children.length - 1; i >= 0; i--) {
+                var node = children[i];
+                if (node.nodeType === 8 || (node.nodeType === 3 && node.nodeValue.trim() === '')) {
+                    parent.removeChild(node);
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

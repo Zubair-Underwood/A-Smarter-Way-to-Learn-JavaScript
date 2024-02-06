@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        let Car = {
+            engineStarted: false,
+
+            startEngine: function () {
+                if (!this.engineStarted) {
+                    console.log("Engine started.");
+                    this.engineStarted = true;
+                } else {
+                    console.log("Engine is already running.");
+                }
+            },
+
+            stopEngine: function () {
+                if (this.engineStarted) {
+                    console.log("Engine stopped.");
+                    this.engineStarted = false;
+                } else {
+                    console.log("Engine is already stopped.");
+                }
+            }
+        };
+
+        Car.startEngine(); 
+        Car.startEngine();
+        Car.stopEngine();  
+        Car.stopEngine();
+
+
+
+    </script>
+
+</body>
+
+</html>

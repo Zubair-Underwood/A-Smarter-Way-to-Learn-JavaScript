@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <p>This is the existing content</p>
+
+    </div>
+
+    <button onClick="addParagraph()">Add Paragraph</button>
+
+    <script>
+
+        function addParagraph() {
+
+            let container = document.getElementById("container");
+            let newParagraph = document.createElement("p");
+            newParagraph.textContent = "This is a new paragraph";
+            container.appendChild(newParagraph);
+        }
+
+    </script>
+
+</body>
+
+</html>

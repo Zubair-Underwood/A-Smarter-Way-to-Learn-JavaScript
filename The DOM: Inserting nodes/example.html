@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>This is the first paragraph.</p>
+
+    <button onclick="insertParagraph()">Insert Paragraph</button>
+
+    <script>
+
+        function insertParagraph() {
+            var existingParagraph = document.querySelector('p');
+            var newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This is a new paragraph.';
+            existingParagraph.insertAdjacentElement('afterend', newParagraph);
+        }
+
+    </script>
+
+</body>
+
+</html>

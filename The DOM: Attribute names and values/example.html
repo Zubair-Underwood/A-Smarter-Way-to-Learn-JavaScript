@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <a id="link" href="https://example.com" title="Example">Visit Example</a>
+    <button onclick="changeTitle()">Change Title</button>
+
+    <script>
+
+        function changeTitle() {
+            var linkElement = document.getElementById('link');
+            linkElement.setAttribute('title', 'New Example');
+        }
+
+    </script>
+
+</body>
+
+</html>

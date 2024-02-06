@@ -10,13 +10,13 @@
 <body>
 
     <img id="image" src="doctors-office.png" alt="doctors-office">
-    <button></button>
+    <button onClick="changeImage()">Change Image</button>
 
 
     <script>
         function changeImage() {
 
-            let imageElement = document.getElementById("doctors-office.png");
+            let imageElement = document.getElementById("image");
             imageElement.src = "waiting-room.png";
             imageElement.alt = "waiting-room";
         }

@@ -21,18 +21,18 @@
             this.lastName = last;
             this.age = age;
             this.eyeColor = eye;
-            this.name = function () {
+            this.changeLastName = function (changeName) {
 
-                return this.firstName + " " + this.lastName
+                this.lastName = changeName;
             };
         }
 
-        const myFather = new Person("John", "Doe", 50, "blue");
+        const myMother = new Person("sally", "Rally", 48, "green");
 
-        document.getElementById("demo").innerHTML = "My father is " + myFather.name();
+        myMother.changeLastName("Doe");
+
+        document.getElementById("demo").innerHTML = "My mother's last name is " + myMother.lastName;
 
     </script>
 
 </body>
-
-</html>

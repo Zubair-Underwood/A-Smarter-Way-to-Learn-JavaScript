@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function checkMethod(obj, methodName) {
+
+            return typeof obj[methodName] === "function";
+        }
+
+        var calculator = {
+
+            add: function (a, b) {
+                return a + b;
+            },
+
+            subtract: function (a, b) {
+
+                return a - b;
+            }
+        };
+
+        console.log(checkMethod(calculator, "add"));
+        console.log(checkMethod(calculator, "multiply"));
+    </script>
+
+</body>
+
+</html>

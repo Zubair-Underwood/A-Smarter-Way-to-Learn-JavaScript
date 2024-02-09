@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="myForm" action="">
+
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            <option value="">Please select</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+        </select>
+        <br>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="">Please select</option>
+        </select>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+
+
+    <script>
+
+        function populateCities() {
+
+            let country = document.getElementById("country").value;
+            let citySelect = document.getElementById("city");
+
+
+            citySelect.innerHTML = "";
+
+            if (country === "USA") {
+
+                addOption(citySelect, "New York", "New York");
+                addOption(citySelect, "Los Angeles", "Los Angeles");
+                addOption(citySelect, "Chicago", "Chicago");
+            } else if (country === "UK") {
+                addOption(citySelect, "London", "London");
+                addOption(citySelect, "Manchester", "Manchester");
+                addOption(citySelect, "Brimingham", "Brimingham");
+            } else if (country === "Canada") {
+
+                addOption(citySelect, "Toronto", "Toronto");
+                addOption(citySelect, "Montreal", "Montreal");
+                addOption(citySelect, "Vancouver", "Vancouver");
+            }
+        }
+
+        function addOption(selectElement, text, value) {
+            let option = document.createElement("option");
+            option.text = text;
+            option.value = value;
+            selectElement.add(option);
+        }
+
+        function validateForm(event) {
+
+            event.preventDefault();
+
+            let country = document.getElementById("country").value;
+            let city = document.getElementById("city").value;
+
+
+            if (county === "") {
+
+                alert("Please select a city.");
+                document.getElementById("city").focus();
+                return false;
+            }
+
+            alert("Form submitted successfully");
+        }
+
+        document.getElementById("country").addEventListener("change", populateCities);
+
+        document.getElementById("myform").addEventListener("submit", validateForm);
+    </script>
+
+</body>
+
+</html>

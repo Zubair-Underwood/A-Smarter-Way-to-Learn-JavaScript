@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function dividNumbers(a, b) {
+
+            try {
+
+                if (b === 0) {
+
+                    throw new Error("Division by Zero error");
+                }
+
+                return a / b;
+            } catch (error) {
+
+                console.error("Error:", error.message);
+                return null;
+            }
+        }
+
+        console.log(dividNumbers(10, 2));
+        console.log(dividNumbers(10, 0));
+
+    </script>
+
+</body>
+
+</html>

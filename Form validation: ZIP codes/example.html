@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="zip">ZIP Code:</label>
+        <input type="text" id="zip" name="zip">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+
+        // Function to validate ZIP code
+        function validateZIP(zip) {
+            // Regular expression to match US ZIP code pattern (5 digits)
+            var zipRegex = /^\d{5}$/;
+            return zipRegex.test(zip);
+        }
+
+        // Function to validate form
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get ZIP code input value
+            var zipInput = document.getElementById('zip');
+            var zip = zipInput.value.trim();
+
+            // Validate ZIP code
+            if (!validateZIP(zip)) {
+                alert('Please enter a valid 5-digit ZIP code.');
+                zipInput.focus();
+                return false;
+            }
+
+            // If validation passes, submit the form
+            alert('Form submitted successfully!');
+            // You can uncomment the following line to actually submit the form
+            // document.getElementById('myForm').submit();
+        }
+
+        // Event listener for form submission
+        document.getElementById('myForm').addEventListener('submit', validateForm);
+
+
+    </script>
+
+</body>
+
+</html>

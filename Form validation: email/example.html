@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email" naame="email">
+        <br>
+        <button type="submit"></button>
+    </form>
+
+    <script>
+
+        // Function to validate email address
+        function validateEmail(email) {
+            // Regular expression to match email address pattern
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Function to validate form
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get email input value
+            var emailInput = document.getElementById('email');
+            var email = emailInput.value.trim();
+
+            // Validate email address
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                emailInput.focus();
+                return false;
+            }
+
+            // If validation passes, submit the form
+            alert('Form submitted successfully!');
+            // You can uncomment the following line to actually submit the form
+            // document.getElementById('myForm').submit();
+        }
+
+        // Event listener for form submission
+        document.getElementById('myForm').addEventListener('submit', validateForm);
+
+
+    </script>
+
+</body>
+
+</html>
